@@ -1,0 +1,15 @@
+Package: devtEp
+Type: Package
+Title: devtools test package
+Version: 1.0
+Date: 2024-10-18
+Author: Yifan Yang
+Maintainer: Yifan Yang <yfyang.86@hotmail.com>
+Description: TODO.
+License: Apache License 2.0
+Imports: Rcpp (>= 1.0.12)
+LinkingTo: Rcpp, RcppEigen
+RoxygenNote: 7.2.3
+NeedsCompilation: yes
+Depends: R (>= 3.5.0)
+
