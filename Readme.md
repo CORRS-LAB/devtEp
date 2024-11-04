@@ -7,10 +7,11 @@
 2. Immune Cell Type Specific DNA Methylation Regions associate with phenotypes
    
 3. HELP Manual:
-    - explain the data structure with simple example(s) 
-    - explain the return value
-    - explain the usage
-    - if possibel, illustrate the way to prepare data (<discuss> we should link it to another repository to tackle this?</discuss>)
+    - marker selection 
+    - benchmarking of deconvolution algorithms
+    - estimating the immune cell fractions from real RRBS data
+    - identifying cell type specific DNA methylation regions associated with phenotypes
+
 
 # Demo: marker selection
 
