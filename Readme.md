@@ -9,7 +9,6 @@
 3. HELP Manual:
     - marker selection and preparing the reference signatures
     - benchmarking of deconvolution algorithms
-    - estimating the immune cell fractions from real RRBS data
     - identifying cell type specific DNA methylation regions associated with phenotypes
 
 
@@ -527,10 +526,9 @@ region.proportion.estimation(ref.file, bulk.file, prop.file, out.file, normaliza
 
 ```
 
-# Demo: estimating the immune cell fractions from real RRBS data
-
 
 # Demo: identifying cell type specific DNA methylation regions associated with phenotypes
+
 
 # Performance
 
