@@ -529,11 +529,11 @@ region.proportion.estimation(ref.file, bulk.file, prop.file, out.file, normaliza
 
 # Demo: estimating the immune cell fractions from real RRBS data
 
-Since real RRBS data may not contain all the regions in ref.file, we recommend users to delete the regions not occurs in real RRBS data before estimating the immune cell fractions.
-We apply the immune cell fraction estimation method in EpiDISH-RPC as an example.
+Since real RRBS data may not contain all the regions in ref.file, we recommend users to delete the regions that doesn't occur in real RRBS data before estimating the immune cell fractions.
+We apply the EpiDISH-RPC algorithm as the immune cell fraction estimation method in the following example.
 
-library(EpiDISH)
-
+```{r}
+   library(EpiDISH)
     ref.file <- "ref.file"
     bulk.file <- "bulk.file"
     out.file <- "est.prop"
@@ -558,7 +558,7 @@ library(EpiDISH)
   
     out <- data.frame(sample.ids =colnames(df), predicted_cell_proportions)
     write.table(out, out.file, row.names = F, sep = "\t", quote = F)
-
+```
 
 
 # Demo: identifying cell type specific DNA methylation regions associated with phenotypes
