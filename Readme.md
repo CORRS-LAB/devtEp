@@ -529,6 +529,36 @@ region.proportion.estimation(ref.file, bulk.file, prop.file, out.file, normaliza
 
 # Demo: estimating the immune cell fractions from real RRBS data
 
+Since real RRBS data may not contain all the regions in ref.file, we recommend users to delete the regions not occurs in real RRBS data before estimating the immune cell fractions.
+We apply the immune cell fraction estimation method in EpiDISH-RPC as an example.
+
+library(EpiDISH)
+
+    ref.file <- "ref.file"
+    bulk.file <- "bulk.file"
+    out.file <- "est.prop"
+    
+    ref.dat = read.table(ref.file, header =T)
+    ref.dt <- ref.dat[,-c(1:3)]
+  
+    celltypes <- colnames(ref.dt) <- read.table(text =colnames(ref.dt), sep = ".")[,2]
+      
+    ref <- matrix(NA, ncol = length(unique(celltypes)), nrow = nrow(ref.dt))
+    colnames(ref) <- unique(celltypes)
+    for(i in colnames(ref)){
+        ref[,i] <- apply(ref.dt[, celltypes == i], 1, mean)
+    }
+      
+    df.dat = read.table(bulk.file, header =T, check.names = F)
+    df <- df.dat[,-c(1:3)]
+  
+    rownames(df) <-   rownames(ref)  <- paste("R",c(1:nrow(df)))
+    predicted_cell_proportions <- epidish(as.matrix(df), as.matrix(ref),method= 'RPC')$estF
+  
+  
+    out <- data.frame(sample.ids =colnames(df), predicted_cell_proportions)
+    write.table(out, out.file, row.names = F, sep = "\t", quote = F)
+
 
 
 # Demo: identifying cell type specific DNA methylation regions associated with phenotypes
