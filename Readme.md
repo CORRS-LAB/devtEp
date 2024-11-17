@@ -2,7 +2,7 @@
 
 1. This project aims to identify cell type specific DNA methylation regions associated with phenotypes using RRBS data.
    To derive a robust estimation of immune cell fractions, we first perform a benchmarking study to compare 19 deconvolution algorithms using RRBS data.
-   Four key steps are included in this project: marker selection, benchmarking of deconvolution algorithms, estimating the immune cell fractions from real RRBS data, identifing cell type specific DNA methylation regions associated with phenotypes.
+   Three key steps are included in this project: marker selection, benchmarking of deconvolution algorithms, estimating the immune cell fractions from real RRBS data, identifing cell type specific DNA methylation regions associated with phenotypes.
 
 2. Immune Cell Type Specific DNA Methylation Regions associate with phenotypes
    
@@ -560,8 +560,9 @@ We apply the EpiDISH-RPC algorithm as the immune cell fraction estimation method
     write.table(out, out.file, row.names = F, sep = "\t", quote = F)
 ```
 
+# Demo: identifing cell type specific DNA methylation regions associated with phenotypes
 
-# Demo: identifying cell type specific DNA methylation regions associated with phenotypes
+The cell type specific DNA methylation regions associated with phnotypes are identified using the functon "CellDMC"in R package "EpiDISH".  
 
 
 # Performance
