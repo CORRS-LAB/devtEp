@@ -55,7 +55,7 @@ select_top_N <- function(dt.input,N, dec){
 data <- demo_devEpt_1k
 
 names <- colnames(data)  
-colnames(data)[-c(1:3)] <- paste(names[-c(1:3)],".Z00R", sep = "") #### TO DO: Can we remove this?
+colnames(data)[-c(1:3)] <- paste(names[-c(1:3)],".Z00R", sep = "")
 uu <- selectSite(df = data, skip.col = 3)
 
 n <- 100
