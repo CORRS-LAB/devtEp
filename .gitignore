@@ -2,6 +2,10 @@
 .idea
 .vscode
 
+## R tmp
+.RData
+.Rhistory
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof

@@ -24,7 +24,7 @@ library(devtools)
 install_github("CORRS-LAB/devtEp")
 ```
 
-Leave an [issue](https://github.com/CORRS-LAB/devtEp/issues) is you come across any problem during installing/using this package. 
+Leave an [issue](https://github.com/CORRS-LAB/devtEp/issues) if you come across any problem during installing/using this package. 
 
 
 # Demo: marker selection and preparing the reference signatures.
