@@ -1,4 +1,4 @@
-# TODO
+# Introduction
 
 1. This project aims to identify cell type specific DNA methylation regions associated with phenotypes using RRBS data.
    To derive a robust estimation of immune cell fractions, we first perform a benchmarking study to compare 19 deconvolution algorithms using RRBS data.
@@ -12,6 +12,20 @@
     - estimating the immune cell fractions from real RRBS data
     - identifying cell type specific DNA methylation regions associated with phenotypes
 
+# Install
+
+- Requirements:
+1. R >= 4.0 with correspoding tool chains;  
+2. a modern C++ compiler supports C++11;
+3. to enable multi-thread, `pthread` is needed.
+   
+```R
+library(devtools)
+install_github("CORRS-LAB/devtEp")
+```
+
+Leave an [issue](https://github.com/CORRS-LAB/devtEp/issues) is you come across any problem during installing/using this package. 
+
 
 # Demo: marker selection and preparing the reference signatures.
 
@@ -20,8 +34,6 @@ To increase the computational efficiency, we optimized the original marker selec
 For each region, two-sample t-tests were applied to assess methylation difference between the target cell type and all other cell types. 
 The top 200 regions with lowest P values were selected for each cell type, and from these, the 100 regions with the highest mean methylation differences were retained. 
 After removing duplicated regions across cell types, the final reference signature was derived.
-
-
 
 
 ```{r}
@@ -564,11 +576,10 @@ We apply the EpiDISH-RPC algorithm as the immune cell fraction estimation method
 
 The cell type specific DNA methylation regions associated with phnotypes are identified using the functon "CellDMC"in R package "EpiDISH".  
 
-
 # Performance
 
-# Logs
+# Change Logs
 
-
-- 2024-11-03: (TODO) **Manual Update**
+- 2024-11-17: **Manual Update**
+- 2024-11-03: **Manual Update**
 - 2024-10-29: **Project initialization**. The first vesiion was finished in July.
